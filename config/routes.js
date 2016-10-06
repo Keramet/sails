@@ -32,9 +32,28 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  // '/': {
+  //   view: 'homepage'
+  // },
+
+  '/': 'RoutingController.home',
+
+  '/data': 'RoutingController.data',
+
+  'GET /login': {
+    view: 'login'
+  },
+
+  'POST /login': 'AuthController.login',
+
+  '/logout': 'AuthController.logout',
+
+  'GET /signin': {
+     view: 'signin'
+  },
+
+
+    
 
   /***************************************************************************
   *                                                                          *
